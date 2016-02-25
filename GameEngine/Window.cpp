@@ -52,10 +52,29 @@ namespace GameEngine {
 		std::cout << "----- OpenGL version : " << glGetString(GL_VERSION) << " -----\n";
 
 		// Set the background color.
-		glClearColor(0.6f, 0.6f, 0.6f, 1.0f);
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
 		// Set to 1 to enable VSYNC or 0 to disbale VSYNC.
 		SDL_GL_SetSwapInterval(1);
+
+		// Enable alpha blend, much easier than i think.
+		glEnable(GL_BLEND);
+
+		// Define how the opengl handles alpha channel.
+		// --------------------------------------------------------------
+		// So this is how i understand it:
+		// 1. The first argument specifies which value you want multiply by the source image's color, it can be red, greem, blue and alpha.
+		//		Set the first argument as "GL_SRC_ALPHA" will take the scorce image's alpha channel and multiply with the color.
+		// 2. The sceond argument specifies how much you want to blend with the existed color.
+		//		For example the back ground color is RED, and you have a other image on the top of the back ground.
+		//		If the alpha of the source image is 1, 1 minus 1 ("GL_ONE_MINUS_SRC_ALPHA") equals 0. 
+		//		0 multiply by the existed color RED is 0 so no transparency.
+		//		If the alpha of the source image is 0, 1 minus 0 equals 1.
+		//		1 multiply by the existed color RED equals to the origin color that is RED, so completely see through.
+		// --------------------------------------------------------------
+		// More information see: https://www.opengl.org/sdk/docs/man/html/glBlendFunc.xhtml
+		// glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 		return 0;
 	}
