@@ -1,5 +1,6 @@
 #include "MainGame.h"
 #include <GameEngine\ResourceManager.h>
+#include <iostream>
 
 // Consturctor, initializes private member variables
 MainGame::MainGame() :
@@ -66,12 +67,17 @@ void MainGame::ProcessInput() {
 		case SDL_KEYUP:
 			_inputManager.KeyReleased(sdlEvent.key.keysym.sym);
 			break;
+		case SDL_MOUSEBUTTONDOWN:
+			_inputManager.KeyPressed(sdlEvent.button.button);
+			break;
+		case SDL_MOUSEBUTTONUP:
+			_inputManager.KeyReleased(sdlEvent.button.button);
+			break;
 		case SDL_QUIT:
 			_currentGameState = GameState::EXIT;
 			break;
 		case SDL_MOUSEMOTION:
-			//std::cout << "X pos: " << sdlEvent.motion.x;
-			//std::cout << " Y pos: " << sdlEvent.motion.y << std::endl;
+			_inputManager.SetMouseScreenCoordinate((float)sdlEvent.motion.x, (float)sdlEvent.motion.y);
 			break;
 		default:
 			break;
@@ -79,6 +85,8 @@ void MainGame::ProcessInput() {
 	}
 	// Process the key board input.
 	ProcessKeyBoardInput();
+
+	ProcessMouseInput();
 }
 
 // Separate the key board part and the mouse motion part to make the code looks more clean.
@@ -106,6 +114,19 @@ void MainGame::ProcessKeyBoardInput() {
 	}
 }
 
+// This handles all the mouse related user input such as clicks and motions.
+void MainGame::ProcessMouseInput() {
+	if (_inputManager.IsKeyPressed(SDL_BUTTON_LEFT)) {
+		glm::vec2 mouseWorldCoordinate = _camera2D.GetWorldFormScreen(_inputManager.GetMouseScreenCoordinate());
+		// std::cout << "X pos: " << mouseCoords.x << " Y pos: " << mouseCoords.y << std::endl;
+		glm::vec2 playPosition(0.0f);
+		glm::vec2 mouseToPlayerDirection = mouseWorldCoordinate - playPosition;
+		mouseToPlayerDirection = glm::normalize(mouseToPlayerDirection);
+
+		_bullets.emplace_back(5.0f, playPosition, mouseToPlayerDirection, 1000);
+	}
+}
+
 // This is where the magics happens :)
 void MainGame::LoopGame() {
 	while (_currentGameState != GameState::EXIT)
@@ -121,11 +142,25 @@ void MainGame::LoopGame() {
 		// Update the camera.
 		_camera2D.UpdateCamera();
 
+		// Update all the bullets.
+		for (unsigned int i = 0; i < _bullets.size();) {
+			_bullets[i].UpdateProjectile();
+			if (_bullets[i].IsLifeTimePassed()) {
+				// Overwrite the current vector element by the last element in the vector.
+				_bullets[i] = _bullets.back();
+				// Then Removes the last element in the vector.
+				_bullets.pop_back();
+			}
+			else
+			{
+				i++;
+			}
+		}
+
 		// Draw the game!
 		DrawGame();
 
 		_fpsLimiter.OnFrameEnd();
-		_fpsLimiter.FpsCounter();
 	}
 }
 
@@ -163,16 +198,20 @@ void MainGame::DrawGame() {
 	_spriteBatch.Begin();
 
 	// origin position x, origin position y, size width and size height.
-	static glm::vec4 position(0.0f, 0.0f, 600.0f, 600.0f);
-	static glm::vec4 uv(0.0f, 0.0f, 1.0f, 1.0f);
 	static GameEngine::GLTexture texture = GameEngine::ResourceManager::GetTexture("Textures/Fallout.png");
+	static glm::vec4 positionAndSize(0.0f, 0.0f, 150.0f, 150.0f);
+	static glm::vec4 uv(0.0f, 0.0f, 1.0f, 1.0f);
 	static GameEngine::Color color;
 	color.red = 225;
 	color.green = 225;
 	color.blue = 225;
 	color.alpha = 225;
 
-	_spriteBatch.AddSprite(position, uv, texture.id, 0.0f, color);
+	_spriteBatch.AddSprite(positionAndSize, uv, texture.id, 0.0f, color);
+	
+	for (unsigned int i = 0; i < _bullets.size(); i++) {
+		_bullets[i].AddProjectile(_spriteBatch);
+	}
 
 	_spriteBatch.End();
 
