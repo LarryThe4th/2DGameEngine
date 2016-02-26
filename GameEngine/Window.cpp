@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include "Window.h"
 #include "ErrorMessage.h"
 
@@ -71,6 +71,15 @@ namespace GameEngine {
 		//		0 multiply by the existed color RED is 0 so no transparency.
 		//		If the alpha of the source image is 0, 1 minus 0 equals 1.
 		//		1 multiply by the existed color RED equals to the origin color that is RED, so completely see through.
+		// --------------------------------------------------------------
+		// One more example:
+		//		DestinationColor = (1.0f, 0.0f, 0.0f, 0.0f) // Red
+		//		SourceColor = (0.0f, 0.0f, 1.0f, 0.6f) // Blue, source alpha= 0.6f
+		//		One Minus Source Alpha = 1.0 – 0.6 = 0.4
+		//	Resolving final color:
+		//		// Blended color = (source color * source alpha) + (destination color * one_minus_source_alpha)
+		//		BlendedColor = (SourceColor * 0.6) + (DestinationColor * 0.4)
+		//		BlendedColor = (0.4f, 0.0f, 0.6f)
 		// --------------------------------------------------------------
 		// More information see: https://www.opengl.org/sdk/docs/man/html/glBlendFunc.xhtml
 		// glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);

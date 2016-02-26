@@ -12,6 +12,8 @@
 #include <GameEngine\InputManager.h>
 #include <GameEngine\Timer.h>
 
+#include "Projectile.h"
+
 enum GameState {
 	PLAY,
 	EXIT
@@ -29,6 +31,7 @@ private:
 	void InitShaders();
 	void ProcessInput();
 	void ProcessKeyBoardInput();
+	void ProcessMouseInput();
 	void LoopGame();
 	void DrawGame();
 
@@ -60,5 +63,7 @@ private:
 
 	GameEngine::FpsLimiter _fpsLimiter;
 	float _targetFPS;
+
+	std::vector<Projectile> _bullets;
 };
 

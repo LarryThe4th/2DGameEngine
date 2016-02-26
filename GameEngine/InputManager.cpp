@@ -3,7 +3,8 @@
 
 namespace GameEngine {
 
-	InputManager::InputManager()
+	InputManager::InputManager() :
+		_mouseScreenCoordinate(0.0f, 0.0f)
 	{
 	}
 
@@ -24,10 +25,17 @@ namespace GameEngine {
 	}
 
 	bool InputManager::IsKeyPressed(SDL_Keycode keyID) {
+		// We don't want to use the associative array approach here.
+		// Because we don't want to create a key if it does not exist.
 		auto iterator = _keyMap.find(keyID);
 		if (iterator != _keyMap.end())
 			return iterator->second;
 		else
 			return false;
+	}
+
+	void InputManager::SetMouseScreenCoordinate(float x, float y) {
+		_mouseScreenCoordinate.x = x;
+		_mouseScreenCoordinate.y = y;
 	}
 }

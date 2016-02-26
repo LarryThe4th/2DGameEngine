@@ -11,8 +11,14 @@ namespace GameEngine {
 		Camera2D();
 		~Camera2D();
 
+		// Sets up the orthographic matrix and screen dimensions.
 		void InitCamera(int screenWidth, int screenHeight);
+
+		// Updates the camera matrix.
 		void UpdateCamera();
+
+		// Take the screen coordinate and convert to into world coordinate.
+		glm::vec2 GetWorldFormScreen(glm::vec2 screenPoint);
 
 		// Setters
 		void SetCameraPosition(const glm::vec2& newPosition) { _cameraPosition = newPosition; _updateCamera = true; }
