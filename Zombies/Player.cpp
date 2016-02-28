@@ -22,7 +22,13 @@ void Player::InitPlayer(glm::vec2 position, float moveSpeed, GameEngine::InputMa
 	_color.alpha = 225;
 }
 
+<<<<<<< HEAD
 void Player::Update() {
+=======
+void Player::Update(const std::vector<std::string>& levelData,
+					std::vector<Human*>& humans,
+					std::vector<Zombie*>& zombies) {
+>>>>>>> refs/remotes/origin/backUp
 	if (_inputManager->IsKeyPressed(SDLK_w)) {
 		_position.y += _moveSpeed;
 	}
@@ -38,4 +44,9 @@ void Player::Update() {
 	if (_inputManager->IsKeyPressed(SDLK_d)) {
 		_position.x += _moveSpeed;
 	}
+<<<<<<< HEAD
+=======
+
+	CollideWithLevel(levelData);
+>>>>>>> refs/remotes/origin/backUp
 }

@@ -6,6 +6,10 @@
 #include <algorithm>
 
 Level::Level() :
+<<<<<<< HEAD
+=======
+	_tileSize(32),
+>>>>>>> refs/remotes/origin/backUp
 	_numHumans(0)
 {
 }
@@ -63,11 +67,19 @@ void Level::InitLevelSprites() {
 			{
 				// Store the player spawn position for later use.
 				case '@':
+<<<<<<< HEAD
+=======
+					_levelData[y][x] = '.';
+>>>>>>> refs/remotes/origin/backUp
 					_playerSpawnPosition.x = x * SpriteSizeWidth;
 					_playerSpawnPosition.y = y * SpriteSizeWidth;
 					break;
 				// Store the player spawn position for later use.
 				case 'Z':
+<<<<<<< HEAD
+=======
+					_levelData[y][x] = '.';
+>>>>>>> refs/remotes/origin/backUp
 					_zombieSpawnPosition.emplace_back(x * SpriteSizeWidth, y * SpriteSizeWidth);
 					break;
 				// The unwalkable red bricks.

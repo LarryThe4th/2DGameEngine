@@ -12,6 +12,12 @@
 
 #include "Level.h"
 #include "Player.h"
+<<<<<<< HEAD
+=======
+#include "Zombie.h"
+
+class Zombie;
+>>>>>>> refs/remotes/origin/backUp
 
 class MainGame
 {
@@ -60,6 +66,12 @@ class MainGame
 		std::vector<Human*> _humans;
 		void DeleteHumans();
 
+<<<<<<< HEAD
+=======
+		// Zombies.
+		std::vector<Zombie*> _zombies;
+
+>>>>>>> refs/remotes/origin/backUp
 		// The player.
 		Player* _player;
 		void InitPlayer();

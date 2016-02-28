@@ -16,12 +16,26 @@ public:
 
 	// Getters
 	glm::vec2 GetPlayerSwapnPosition() const { return _playerSpawnPosition; }
+<<<<<<< HEAD
 	const std::vector<glm::vec2>& GetZombiesSwapnPosition() const { return _zombieSpawnPosition; }
 
+=======
+	const std::vector<glm::vec2>& GetZombieSwapnPositions() const { return _zombieSpawnPosition; }
+	unsigned int GetSquareTileSize() const { return _tileSize; }
+	const std::vector<std::string>& GetLevelData() const { return _levelData; }
+
+	// Setters 
+	void SetSquareTileSize(unsigned int size) {  _tileSize = size; }
+>>>>>>> refs/remotes/origin/backUp
 
 private:
 	void InitLevelSprites();
 
+<<<<<<< HEAD
+=======
+	unsigned int _tileSize;
+
+>>>>>>> refs/remotes/origin/backUp
 	// A list of strings holds the data of the level. 
 	std::vector<std::string> _levelData;
 	// The number of humans in the level.

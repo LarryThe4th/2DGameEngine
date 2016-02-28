@@ -85,7 +85,11 @@ void MainGame::LoopGame() {
 
 		DrawGame();
 
+<<<<<<< HEAD
 		_fpsLimiter.FpsCounter();
+=======
+		// _fpsLimiter.FpsCounter();
+>>>>>>> refs/remotes/origin/backUp
 		_fpsLimiter.OnFrameEnd();
 	}
 }
@@ -128,7 +132,13 @@ void MainGame::UpdateActors() {
 	// Draw the player.
 	for (size_t i = 0; i < _humans.size(); i++)
 	{
+<<<<<<< HEAD
 		_humans[i]->Update();
+=======
+		_humans[i]->Update(_levels[_currentLevelIndex]->GetLevelData(),
+							_humans,
+							_zombies);
+>>>>>>> refs/remotes/origin/backUp
 	}
 }
 

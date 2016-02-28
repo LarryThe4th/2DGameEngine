@@ -1,0 +1,16 @@
+﻿  Zombie.cpp
+  Player.cpp
+  MainGame.cpp
+  Main.cpp
+  Level.cpp
+c:\users\oijuh.kuhjb225513\desktop\c++\gameengine\zombies\level.cpp(68): warning C4244: '=': conversion from 'size_t' to 'float', possible loss of data
+c:\users\oijuh.kuhjb225513\desktop\c++\gameengine\zombies\level.cpp(69): warning C4244: '=': conversion from 'size_t' to 'float', possible loss of data
+c:\users\oijuh.kuhjb225513\desktop\c++\gameengine\zombies\level.cpp(111): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'size_t'
+  c:\users\oijuh.kuhjb225513\desktop\c++\gameengine\zombies\level.cpp(111): note: consider using '%zd' in the format string
+c:\users\oijuh.kuhjb225513\desktop\c++\gameengine\zombies\level.cpp(111): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 3 has type 'size_t'
+  c:\users\oijuh.kuhjb225513\desktop\c++\gameengine\zombies\level.cpp(111): note: consider using '%zd' in the format string
+  Human.cpp
+  Actor.cpp
+c:\users\oijuh.kuhjb225513\desktop\c++\gameengine\zombies\actor.cpp(53): warning C4244: 'argument': conversion from 'float' to 'unsigned __int64', possible loss of data
+  Generating Code...
+GameEngine.lib(ResourceManager.obj) : fatal error LNK1112: module machine type 'X86' conflicts with target machine type 'x64'
