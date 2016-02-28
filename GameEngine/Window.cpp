@@ -52,7 +52,7 @@ namespace GameEngine {
 		std::cout << "----- OpenGL version : " << glGetString(GL_VERSION) << " -----\n";
 
 		// Set the background color.
-		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+		glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
 
 		// Set to 1 to enable VSYNC or 0 to disbale VSYNC.
 		SDL_GL_SetSwapInterval(1);

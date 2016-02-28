@@ -1,7 +1,5 @@
 #include "TextureCache.h"
 #include "ImageLoader.h"
-#include <iostream>
-
 namespace GameEngine {
 	TextureCache::TextureCache()
 	{
@@ -25,10 +23,10 @@ namespace GameEngine {
 			// Insert it into the map just like how you use a dictionary in C#.
 			_textureMap.insert(std::make_pair(texturePath, newTexture));
 
-			std::cout << "Loaded texture!" << std::endl;
+			// std::cout << "Loaded texture!" << std::endl;
 			return newTexture;
 		}
-		std::cout << "Loaded cached texture!" << std::endl;
+		// std::cout << "Loaded cached texture!" << std::endl;
 		return iterator->second;
 	}
 }

@@ -1,0 +1,4 @@
+﻿  Actor.cpp
+c:\users\oijuh.kuhjb225513\desktop\c++\gameengine\zombies\actor.cpp(55): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+  Zombies.vcxproj -> C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\Zombies.exe
+  Zombies.vcxproj -> C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\Zombies.pdb (Partial PDB)
