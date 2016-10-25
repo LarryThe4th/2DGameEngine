@@ -1,22 +1,4 @@
-﻿  Window.cpp
-<<<<<<< HEAD
-=======
-  Timer.cpp
-  TextureCache.cpp
-  SpriteBatch.cpp
-  Sprite.cpp
-  ResourceManager.cpp
-  picoPNG.cpp
-  IOManager.cpp
-c:\users\oijuh.kuhjb225513\desktop\c++\gameengine\gameengine\iomanager.cpp(33): warning C4244: 'argument': conversion from 'std::streamoff' to 'unsigned int', possible loss of data
-  InputManager.cpp
-  ImageLoader.cpp
-  GLSLProgram.cpp
-  GameEngine.cpp
-  ErrorMessage.cpp
-  Camera2D.cpp
-  Generating Code...
->>>>>>> refs/remotes/origin/backUp
+﻿  TextureCache.cpp
 glew32.lib(glew32.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in SDL2.lib(SDL2.dll); second definition ignored
 glew32.lib(glew32.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
 opengl32.lib(OPENGL32.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in SDL2.lib(SDL2.dll); second definition ignored

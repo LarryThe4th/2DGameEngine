@@ -22,14 +22,16 @@ namespace GameEngine {
 		_startTicks = SDL_GetTicks();
 	}
 
-	void FpsLimiter::OnFrameEnd() {
+	float FpsLimiter::OnFrameEnd() {
 		CalculateFPS();
 
-		Uint32 frameTicks = SDL_GetTicks() - _startTicks;
-		// Limit the FPS to the target FPS.
+		float frameTicks = SDL_GetTicks() - _startTicks;
+		//Limit the FPS to the max FPS
 		if (1000.0f / _targetFps > frameTicks) {
 			SDL_Delay((Uint32)(1000.0f / _targetFps - frameTicks));
 		}
+
+		return _fps;
 	}
 
 	void FpsLimiter::FpsCounter() {

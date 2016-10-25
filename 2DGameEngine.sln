@@ -4,10 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2DGame", "2DGame\2DGame.vcxproj", "{E0C22B0A-B596-4E7F-8292-3A3E4B3DDB2B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3D81019C-61FA-4EAC-B3EC-75AC8F06BD1B} = {3D81019C-61FA-4EAC-B3EC-75AC8F06BD1B}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameEngine", "GameEngine\GameEngine.vcxproj", "{3D81019C-61FA-4EAC-B3EC-75AC8F06BD1B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zombies", "Zombies\Zombies.vcxproj", "{33A4ED6A-EEDF-47E1-AAF0-F3EFE9C3346C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpaceShooter", "SpaceShooter\Zombies.vcxproj", "{33A4ED6A-EEDF-47E1-AAF0-F3EFE9C3346C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

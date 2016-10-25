@@ -1,0 +1,6 @@
+﻿  Level.cpp
+  MainGame.cpp
+c:\users\oijuh.kuhjb225513\desktop\c++\gameengine\zombies\maingame.cpp(90): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\oijuh.kuhjb225513\desktop\c++\gameengine\zombies\maingame.cpp(294): warning C4244: 'argument': conversion from 'Sint32' to 'float', possible loss of data
+  Zombies.vcxproj -> C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\Zombies.exe
+  Zombies.vcxproj -> C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\Zombies.pdb (Partial PDB)

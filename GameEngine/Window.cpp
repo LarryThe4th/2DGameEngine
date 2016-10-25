@@ -55,7 +55,7 @@ namespace GameEngine {
 		glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
 
 		// Set to 1 to enable VSYNC or 0 to disbale VSYNC.
-		SDL_GL_SetSwapInterval(1);
+		SDL_GL_SetSwapInterval(0);
 
 		// Enable alpha blend, much easier than i think.
 		glEnable(GL_BLEND);

@@ -15,7 +15,7 @@ namespace GameEngine {
 		void SetTargetFPS(float targetFps);
 
 		void OnFrameBegin();
-		void OnFrameEnd();
+		float OnFrameEnd();
 
 		void FpsCounter();
 	private:

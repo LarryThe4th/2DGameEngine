@@ -1,0 +1,83 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (Zombies.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Agent.cpp
+  Bullet.cpp
+Bullet.cpp(72): warning C4018: '>=': signed/unsigned mismatch
+Bullet.cpp(73): warning C4018: '>=': signed/unsigned mismatch
+  Gun.cpp
+Gun.cpp(14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(737): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(857): note: see reference to function template instantiation 'void std::allocator<_Ty>::construct<_Objty,const glm::vec2&,const glm::vec2&,int&,float&>(_Objty *,const glm::vec2 &,const glm::vec2 &,int &,float &)' being compiled
+          with
+          [
+              _Ty=Bullet,
+              _Objty=Bullet
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(857): note: see reference to function template instantiation 'void std::allocator<_Ty>::construct<_Objty,const glm::vec2&,const glm::vec2&,int&,float&>(_Objty *,const glm::vec2 &,const glm::vec2 &,int &,float &)' being compiled
+          with
+          [
+              _Ty=Bullet,
+              _Objty=Bullet
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(996): note: see reference to function template instantiation 'void std::allocator_traits<_Alloc>::construct<_Ty,const glm::vec2&,const glm::vec2&,int&,float&>(std::allocator<_Ty> &,_Objty *,const glm::vec2 &,const glm::vec2 &,int &,float &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<Bullet>,
+              _Ty=Bullet,
+              _Objty=Bullet
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(995): note: see reference to function template instantiation 'void std::allocator_traits<_Alloc>::construct<_Ty,const glm::vec2&,const glm::vec2&,int&,float&>(std::allocator<_Ty> &,_Objty *,const glm::vec2 &,const glm::vec2 &,int &,float &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<Bullet>,
+              _Ty=Bullet,
+              _Objty=Bullet
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vector(930): note: see reference to function template instantiation 'void std::_Wrap_alloc<std::allocator<_Ty>>::construct<_Ty,const glm::vec2&,const glm::vec2&,int&,float&>(_Ty *,const glm::vec2 &,const glm::vec2 &,int &,float &)' being compiled
+          with
+          [
+              _Ty=Bullet
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vector(929): note: see reference to function template instantiation 'void std::_Wrap_alloc<std::allocator<_Ty>>::construct<_Ty,const glm::vec2&,const glm::vec2&,int&,float&>(_Ty *,const glm::vec2 &,const glm::vec2 &,int &,float &)' being compiled
+          with
+          [
+              _Ty=Bullet
+          ]
+  Gun.cpp(45): note: see reference to function template instantiation 'void std::vector<Bullet,std::allocator<_Ty>>::emplace_back<const glm::vec2&,const glm::vec2&,int&,float&>(const glm::vec2 &,const glm::vec2 &,int &,float &)' being compiled
+          with
+          [
+              _Ty=Bullet
+          ]
+  Gun.cpp(41): note: see reference to function template instantiation 'void std::vector<Bullet,std::allocator<_Ty>>::emplace_back<const glm::vec2&,const glm::vec2&,int&,float&>(const glm::vec2 &,const glm::vec2 &,int &,float &)' being compiled
+          with
+          [
+              _Ty=Bullet
+          ]
+  Level.cpp
+  Main.cpp
+  MainGame.cpp
+MainGame.cpp(90): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+MainGame.cpp(294): warning C4244: 'argument': conversion from 'Sint32' to 'float', possible loss of data
+  Player.cpp
+  SpaceShip.cpp
+SpaceShip.cpp(19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+SpaceShip.cpp(57): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  UFO.cpp
+GameEngine.lib(SpriteBatch.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+  Generating code
+  All 970 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+GameEngine.lib(Camera2D.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(Camera2D.obj)' or at 'G:\Portfolio\GameEngine\Release\GameEngine.pdb'; linking object as if no debug info
+GameEngine.lib(ErrorMessage.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(ErrorMessage.obj)' or at 'G:\Portfolio\GameEngine\Release\GameEngine.pdb'; linking object as if no debug info
+GameEngine.lib(GameEngine.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(GameEngine.obj)' or at 'G:\Portfolio\GameEngine\Release\GameEngine.pdb'; linking object as if no debug info
+GameEngine.lib(GLSLProgram.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(GLSLProgram.obj)' or at 'G:\Portfolio\GameEngine\Release\GameEngine.pdb'; linking object as if no debug info
+GameEngine.lib(ImageLoader.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(ImageLoader.obj)' or at 'G:\Portfolio\GameEngine\Release\GameEngine.pdb'; linking object as if no debug info
+GameEngine.lib(InputManager.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(InputManager.obj)' or at 'G:\Portfolio\GameEngine\Release\GameEngine.pdb'; linking object as if no debug info
+GameEngine.lib(IOManager.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(IOManager.obj)' or at 'G:\Portfolio\GameEngine\Release\GameEngine.pdb'; linking object as if no debug info
+GameEngine.lib(picoPNG.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(picoPNG.obj)' or at 'G:\Portfolio\GameEngine\Release\GameEngine.pdb'; linking object as if no debug info
+GameEngine.lib(ResourceManager.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(ResourceManager.obj)' or at 'G:\Portfolio\GameEngine\Release\GameEngine.pdb'; linking object as if no debug info
+GameEngine.lib(SpriteBatch.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(SpriteBatch.obj)' or at 'G:\Portfolio\GameEngine\Release\GameEngine.pdb'; linking object as if no debug info
+GameEngine.lib(TextureCache.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(TextureCache.obj)' or at 'G:\Portfolio\GameEngine\Release\GameEngine.pdb'; linking object as if no debug info
+GameEngine.lib(Timer.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(Timer.obj)' or at 'G:\Portfolio\GameEngine\Release\GameEngine.pdb'; linking object as if no debug info
+GameEngine.lib(Window.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(Window.obj)' or at 'G:\Portfolio\GameEngine\Release\GameEngine.pdb'; linking object as if no debug info
+  Zombies.vcxproj -> G:\Portfolio\GameEngine\Release\SpaceShooter.exe
+  Zombies.vcxproj -> G:\Portfolio\GameEngine\Release\SpaceShooter.pdb (Full PDB)

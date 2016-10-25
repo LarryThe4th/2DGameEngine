@@ -3,5 +3,18 @@
   MainGame.cpp
   Main.cpp
   Generating Code...
+GameEngine.lib(Window.obj) : warning LNK4204: 'C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\GameEngine.pdb' is missing debugging information for referencing module; linking object as if no debug info
+GameEngine.lib(Timer.obj) : warning LNK4204: 'C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\GameEngine.pdb' is missing debugging information for referencing module; linking object as if no debug info
+GameEngine.lib(TextureCache.obj) : warning LNK4204: 'C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\GameEngine.pdb' is missing debugging information for referencing module; linking object as if no debug info
+GameEngine.lib(SpriteBatch.obj) : warning LNK4204: 'C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\GameEngine.pdb' is missing debugging information for referencing module; linking object as if no debug info
+GameEngine.lib(ResourceManager.obj) : warning LNK4204: 'C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\GameEngine.pdb' is missing debugging information for referencing module; linking object as if no debug info
+GameEngine.lib(picoPNG.obj) : warning LNK4204: 'C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\GameEngine.pdb' is missing debugging information for referencing module; linking object as if no debug info
+GameEngine.lib(IOManager.obj) : warning LNK4204: 'C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\GameEngine.pdb' is missing debugging information for referencing module; linking object as if no debug info
+GameEngine.lib(InputManager.obj) : warning LNK4204: 'C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\GameEngine.pdb' is missing debugging information for referencing module; linking object as if no debug info
+GameEngine.lib(ImageLoader.obj) : warning LNK4204: 'C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\GameEngine.pdb' is missing debugging information for referencing module; linking object as if no debug info
+GameEngine.lib(GLSLProgram.obj) : warning LNK4204: 'C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\GameEngine.pdb' is missing debugging information for referencing module; linking object as if no debug info
+GameEngine.lib(GameEngine.obj) : warning LNK4204: 'C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\GameEngine.pdb' is missing debugging information for referencing module; linking object as if no debug info
+GameEngine.lib(ErrorMessage.obj) : warning LNK4204: 'C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\GameEngine.pdb' is missing debugging information for referencing module; linking object as if no debug info
+GameEngine.lib(Camera2D.obj) : warning LNK4204: 'C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\GameEngine.pdb' is missing debugging information for referencing module; linking object as if no debug info
   2DGame.vcxproj -> C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\2DGame.exe
   2DGame.vcxproj -> C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Debug\2DGame.pdb (Partial PDB)

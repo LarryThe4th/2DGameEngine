@@ -5,7 +5,8 @@
 #include "ErrorMessage.h"
 
 namespace GameEngine {
-	void FatalError(std::string errorMessage) {
+
+	void GameEngine::FatalError(std::string errorMessage) {
 		std::cout << errorMessage << std::endl;
 		std::cout << "Enter any key to quit." << std::endl;
 

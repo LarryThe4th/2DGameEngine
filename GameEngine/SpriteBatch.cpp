@@ -61,7 +61,7 @@ namespace GameEngine {
 		// The total number of vertices will be the number of sprites times 6. 
 		vertices.resize(_sprites.size() * numVertices);
 
-		// The there has no sprite then we don't need to do anything.
+		// If there has no sprite then we don't need to do anything.
 		if (_sprites.empty()) { return; }
 
 		// Keep tracking the index of the vertices.

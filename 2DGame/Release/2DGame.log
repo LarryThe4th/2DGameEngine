@@ -1,0 +1,9 @@
+﻿  Main.cpp
+  MainGame.cpp
+  Projectile.cpp
+GameEngine.lib(InputManager.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+  Generating code
+  All 258 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  2DGame.vcxproj -> C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Release\2DGame.exe
+  2DGame.vcxproj -> C:\Users\oijuh.kuhjb225513\Desktop\C++\GameEngine\Release\2DGame.pdb (Full PDB)
