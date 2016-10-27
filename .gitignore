@@ -49,7 +49,7 @@ x64/
 build/
 [Bb]in/
 [Oo]bj/
-OldZombieGame/
+.OldZombieGame/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
